@@ -7,7 +7,6 @@ The square of the sum of the first ten natural numbers is,
 of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.*/
 public class SumOfSquare_SumKaSquare {
     public static void main(String[] args) {
-        Scanner gb = new Scanner(System.in);
         int sumOfSquares=0, sum=0;
         for(int i=1;i<=100;i++){
             sumOfSquares+=i*i;
