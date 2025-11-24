@@ -9,9 +9,9 @@ public class PerfectNumber {
         System.out.println("Enter a number:");
         int n = gb.nextInt();
         int sum = 0;
-        for(int i=n;i!=0;i/=10){
-            int dig = i%10;
-            sum+=dig;
+        for(int i=1;i<n;i++){
+            if(n%i==0)
+                sum+=i;
         }
         if(n==sum)
             System.out.println(n+" is a perfect number.");
