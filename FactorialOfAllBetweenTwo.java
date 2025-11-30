@@ -16,12 +16,13 @@ public class FactorialOfAllBetweenTwo {
         int m = gb.nextInt();
         System.out.println("Enter value of n (larger number):");
         int n = gb.nextInt();
+        int factorial = 1;
+        for(int i=1;i<=m;i++){
+            factorial = factorial*i;
+        }
         for(int i=m;i<=n;i++){
-            int p = 1;
-            for(int j=1;j<=i;j++){
-                p*=j;
-            }
-            System.out.println("Factorial of "+i+" is: "+p);
+            System.out.println("Factorial of "+i+" is: "+factorial);
+            factorial = factorial*(i+1);
         }
         gb.close();
     }

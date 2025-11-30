@@ -15,15 +15,16 @@ public class PrimeBetweenTwo{
         int n2 = gb.nextInt();
         System.out.print("Prime numbers between "+n1+" and "+n2+" are: ");
         for(int i=n1;i<=n2;i++){
-            int f=0;
-            for(int j=1;j<=i;j++){
-                if(i%j==0)
-                    f++;
+            boolean isPrime = true;
+            for(int j=2;j<=(int)(Math.sqrt(i));j++){
+                if(i%j==0){
+                    isPrime=false;
+                }
             }
-            if(f==2)
-                System.out.print(i+" ");
-        }
+            if(isPrime){
+                System.out.print(i+" ");}
+            }
         System.out.println();
         gb.close();
+        }
     }
-} 

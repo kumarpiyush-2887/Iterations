@@ -12,10 +12,10 @@ public class Pattern_8 {
         for(int i=1;i<=5;i++){
             int n=5;
             for(int j=1;j<=5;j++){
-                if(n!=i)
-                    System.out.print(n+" ");
+                if(n==i)
+                    System.out.print("*");
                 else
-                    System.out.print("* ");
+                    System.out.print(n);
                 n--;
             }
             System.out.println();
