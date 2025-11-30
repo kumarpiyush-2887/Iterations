@@ -14,14 +14,14 @@ public class AmicableNumbers {
         int n1 = gb.nextInt();
         System.out.println("Enter second number:");
         int n2 = gb.nextInt();
-        int sum1=0, sum2=0;
+        int sum1=1, sum2=1; // Since 1 will be factors of both
 
-        for(int i=1;i<n1;i++){
+        for(int i=2;i<=n1/2;i++){
             if(n1%i==0)
                 sum1+=i;
         }
 
-        for(int i=1;i<n2;i++){
+        for(int i=2;i<=n2/2;i++){
             if(n2%i==0)
                 sum2+=i;
         }
