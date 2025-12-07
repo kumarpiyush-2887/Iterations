@@ -11,16 +11,20 @@ public class TwistedPrime {
             int dig = i%10;
             revNo = revNo*10 + dig;
         }
-        int f1 = 0, f2 = 0;
-        for(int i=1;i<=n;i++){
-            if(n%i==0)
-                f1++;
+        boolean prime1=true, prime2=true;
+        for(int i=2;i<=(int)(Math.sqrt(n));i++){
+            if(n%i==0){
+                prime2=false;
+                break;
+            }
         }
-        for(int i=1;i<=revNo;i++){
-            if(revNo%i==0)
-                f2++;
+        for(int i=2;i<=(int)(Math.sqrt(revNo));i++){
+            if(revNo%i==0){
+                prime2=false;
+                break;
+            }
         }
-        if(f1==2 && f2==2)
+        if(prime1 && prime2)
             System.out.println(n+" is a twisted prime.");
         else
             System.out.println(n+" is not a twisted prime.");
